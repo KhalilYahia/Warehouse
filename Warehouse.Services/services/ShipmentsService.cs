@@ -320,7 +320,7 @@ namespace Warehouse.Services.services
                 var Models = _IUnitOfWork.repository<OutboundDocument>().Get(m => m.Id == id && m.IsSigned);
                 return Models.Result.Any();
             }
-            return true;
+            return false;
 
         }
 
