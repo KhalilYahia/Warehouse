@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Advertisement.cs" />
+    <Compile Remove="Entities\AdvertisementProperties.cs" />
+    <Compile Remove="Entities\AdvertismentSearch.cs" />
+    <Compile Remove="Entities\Blog.cs" />
+    <Compile Remove="Entities\CategoryDescription.cs" />
+    <Compile Remove="Entities\City.cs" />
+    <Compile Remove="Entities\CityDescription.cs" />
+    <Compile Remove="Entities\ClaimBase.cs" />
+    <Compile Remove="Entities\Favorite.cs" />
+    <Compile Remove="Entities\ImageOfAdvertisment.cs" />
+    <Compile Remove="Entities\Post.cs" />
+    <Compile Remove="Entities\Properties.cs" />
+    <Compile Remove="IRepositories\IRoleClaimRepository.cs" />
+    <Compile Remove="IRepositories\IRoleRepository.cs" />
+    <Compile Remove="IRepositories\IUserLoginRepository.cs" />
+    <Compile Remove="IRepositories\IUserRepository.cs" />
+    <Compile Remove="IRepositories\IUserRoleRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Common\Warehouse.Common.csproj" />
+  </ItemGroup>
+
+</Project>

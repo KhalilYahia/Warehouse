@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <UserSecretsId>b798cc8a-a580-46e5-acab-2d4099deaca7</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Database\**" />
+    <Compile Remove="Migrations\**" />
+    <Content Remove="Database\**" />
+    <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Database\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Database\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AccountController.cs" />
+    <Compile Remove="Controllers\AdminAdvertisementController.cs" />
+    <Compile Remove="Controllers\AdminCategoryController.cs" />
+    <Compile Remove="Controllers\AdminCityController.cs" />
+    <Compile Remove="Controllers\AdminPropertyController.cs" />
+    <Compile Remove="Controllers\ApiBaseController.cs" />
+    <Compile Remove="Controllers\BillingController.cs" />
+    <Compile Remove="Controllers\BlogsController.cs" />
+    <Compile Remove="Controllers\BoxesFieldController.cs" />
+    <Compile Remove="Controllers\BuyerController.cs" />
+    <Compile Remove="Controllers\CoolingRoomsController.cs" />
+    <Compile Remove="Controllers\DailyController.cs" />
+    <Compile Remove="Controllers\DatabaseBackupController.cs" />
+    <Compile Remove="Controllers\EmployeeController.cs" />
+    <Compile Remove="Controllers\ExternalEnvoicesController.cs" />
+    <Compile Remove="Controllers\FinancialEntitlementsController .cs" />
+    <Compile Remove="Controllers\FinancialPaymentsController .cs" />
+    <Compile Remove="Controllers\FuelController.cs" />
+    <Compile Remove="Controllers\OtherSalesController.cs" />
+    <Compile Remove="Controllers\RefrigeratorController.cs" />
+    <Compile Remove="Controllers\RepositoryInOutController.cs" />
+    <Compile Remove="Controllers\RepositoryMaterialsController.cs" />
+    <Compile Remove="Controllers\SupplierController .cs" />
+    <Compile Remove="Controllers\TestLLamaController.cs" />
+    <Compile Remove="Controllers\TotalFundsController.cs" />
+    <Compile Remove="Controllers\UserAdvertisementController.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="8.0.5" />
+    <PackageReference Include="itextsharp" Version="5.5.13.4" />
+    <PackageReference Include="LLamaSharp" Version="0.11.2" />
+    <PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.11.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0-preview.3.24172.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Model\Warehouse.Data.csproj" />
+    <ProjectReference Include="..\Warehouse.Services\Warehouse.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="error\" />
+  </ItemGroup>
+
+</Project>

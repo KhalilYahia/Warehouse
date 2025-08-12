@@ -1,0 +1,96 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTO\AddBlogDto.cs" />
+    <Compile Remove="DTO\AddPostDto.cs" />
+    <Compile Remove="DTO\GetBlogDto.cs" />
+    <Compile Remove="DTO\GetPostDto.cs" />
+    <Compile Remove="Identity\ApplicationUserManager.cs" />
+    <Compile Remove="Identity\IdentityRole.cs" />
+    <Compile Remove="Identity\IdentityUser.cs" />
+    <Compile Remove="Iservices\DatabaseBackupService.cs" />
+    <Compile Remove="Iservices\IAdvertisementService.cs" />
+    <Compile Remove="Iservices\IBillingService.cs" />
+    <Compile Remove="Iservices\IBlogsService.cs" />
+    <Compile Remove="Iservices\IBoxesFieldService.cs" />
+    <Compile Remove="Iservices\IBuyerService.cs" />
+    <Compile Remove="Iservices\ICarsService.cs" />
+    <Compile Remove="Iservices\ICategoryService.cs" />
+    <Compile Remove="Iservices\ICityService.cs" />
+    <Compile Remove="Iservices\ICoolingRoomsService.cs" />
+    <Compile Remove="Iservices\IDailyService.cs" />
+    <Compile Remove="Iservices\IEmailService.cs" />
+    <Compile Remove="Iservices\IEmployeeService.cs" />
+    <Compile Remove="Iservices\IExternalEnvoicesService.cs" />
+    <Compile Remove="Iservices\IFavoriteService.cs" />
+    <Compile Remove="Iservices\IFinancialEntitlementService.cs" />
+    <Compile Remove="Iservices\IFinancialPaymentService.cs" />
+    <Compile Remove="Iservices\IFuelService.cs" />
+    <Compile Remove="Iservices\IOtherSalesService.cs" />
+    <Compile Remove="Iservices\IPostsService.cs" />
+    <Compile Remove="Iservices\IPropertyService.cs" />
+    <Compile Remove="Iservices\IRefrigeratorService.cs" />
+    <Compile Remove="Iservices\IRepositoryInOutServices.cs" />
+    <Compile Remove="Iservices\IRepositoryMaterialsService.cs" />
+    <Compile Remove="Iservices\ISupplierService.cs" />
+    <Compile Remove="Iservices\ITokenService.cs" />
+    <Compile Remove="Iservices\ITotalFundsService.cs" />
+    <Compile Remove="Iservices\IUserService.cs" />
+    <Compile Remove="services\BillingService.cs" />
+    <Compile Remove="services\BlogsService.cs" />
+    <Compile Remove="services\BoxesFieldService.cs" />
+    <Compile Remove="services\BuyerService.cs" />
+    <Compile Remove="services\CarsService.cs" />
+    <Compile Remove="services\CategoryService.cs" />
+    <Compile Remove="services\CityService.cs" />
+    <Compile Remove="services\CoolingRoomsService.cs" />
+    <Compile Remove="services\DailyService.cs" />
+    <Compile Remove="services\DatabaseBackupService.cs" />
+    <Compile Remove="services\EmailService.cs" />
+    <Compile Remove="services\EmployeeService.cs" />
+    <Compile Remove="services\ExternalEnvoicesService.cs" />
+    <Compile Remove="services\FavoriteService.cs" />
+    <Compile Remove="services\FinancialEntitlementService.cs" />
+    <Compile Remove="services\FinancialPaymentService.cs" />
+    <Compile Remove="services\FuelService.cs" />
+    <Compile Remove="services\OtherSalesService.cs" />
+    <Compile Remove="services\PostsService.cs" />
+    <Compile Remove="services\PropertyService.cs" />
+    <Compile Remove="services\RefrigeratorService.cs" />
+    <Compile Remove="services\RepositoryInOutService.cs" />
+    <Compile Remove="services\RepositoryMaterialsService.cs" />
+    <Compile Remove="services\SupplierService.cs" />
+    <Compile Remove="services\TokenService.cs" />
+    <Compile Remove="services\TotalFundsService.cs" />
+    <Compile Remove="services\UserService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="LLamaSharp" Version="0.11.2" />
+    <PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.11.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-preview.3.24172.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0-preview.3.24172.9" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0-preview.3.24172.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Domain\Warehouse.Domain.csproj" />
+    <ProjectReference Include="..\Warehouse.Model\Warehouse.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Identity\" />
+  </ItemGroup>
+
+</Project>

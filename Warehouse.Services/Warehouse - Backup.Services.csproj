@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTO\AddBlogDto.cs" />
+    <Compile Remove="DTO\AddPostDto.cs" />
+    <Compile Remove="DTO\GetBlogDto.cs" />
+    <Compile Remove="DTO\GetPostDto.cs" />
+    <Compile Remove="DTO\Validators\AddBlogDtoValidator.cs" />
+    <Compile Remove="Identity\ApplicationUserManager.cs" />
+    <Compile Remove="Identity\IdentityRole.cs" />
+    <Compile Remove="Identity\IdentityUser.cs" />
+    <Compile Remove="Iservices\IAdvertisementService.cs" />
+    <Compile Remove="Iservices\IBlogsService.cs" />
+    <Compile Remove="Iservices\ICityService.cs" />
+    <Compile Remove="Iservices\IFavoriteService.cs" />
+    <Compile Remove="Iservices\IPostsService.cs" />
+    <Compile Remove="Iservices\IPropertyService.cs" />
+    <Compile Remove="services\AdvertisementService.cs" />
+    <Compile Remove="services\BlogsService.cs" />
+    <Compile Remove="services\CityService.cs" />
+    <Compile Remove="services\FavoriteService.cs" />
+    <Compile Remove="services\PostsService.cs" />
+    <Compile Remove="services\PropertyService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="LLamaSharp" Version="0.11.2" />
+    <PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.11.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-preview.3.24172.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0-preview.3.24172.9" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0-preview.3.24172.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Domain\Warehouse.Domain.csproj" />
+    <ProjectReference Include="..\Warehouse.Model\Warehouse.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\Validators\" />
+    <Folder Include="Identity\" />
+  </ItemGroup>
+
+</Project>
